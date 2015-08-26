@@ -1,0 +1,18 @@
+<%= erb :_new %>
+
+<% @tasks.each do |task| %>
+  <div class="task <%= 'done' if task["done"] %>">
+    <div><strong><%= task["title"] %></strong></div>
+    <div class="actions">
+      <form action="/tasks/<%= task['id'] %>" method="post">
+        <input type="hidden" name="_method" value="put">
+        <button type="submit" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
+      </form>
+
+      <form action="/tasks/<%= task['id'] %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit" href="" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+      </form>        
+    </div>
+  </div>
+<% end %>
