@@ -1,0 +1,23 @@
+.form-task {
+  margin: 20px 0;
+}
+
+.task {
+  border: 1px solid #ccc;
+  border-left: 5px solid #c7d3d8;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.done {
+  border-left: 5px solid #3F87C5;
+}
+
+.actions {
+  text-align: right;
+  margin-bottom: 14px;
+}
+
+.actions form{
+  display: inline;
+}
