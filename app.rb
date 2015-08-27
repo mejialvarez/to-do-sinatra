@@ -26,7 +26,7 @@ post '/tasks' do
   redirect '/tasks?done=false'
 end
 
-put '/tasks/:id' do
+patch '/tasks/:id' do
   Tarea.update(params[:id])
   redirect '/tasks?done=true'
 end
